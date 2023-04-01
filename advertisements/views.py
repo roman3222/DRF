@@ -19,10 +19,10 @@ class AdvertisementViewSet(ModelViewSet):
     filterset_class = AdvertisementFilter
 
     def get_permissions(self):
-        if self.action in ["create", "update", "partial_update"]:
+        if self.action in ["create", "update", "destroy", "partial_update"]:
             return [IsAuthenticated(), IsOwnerOrReadOnly()]
-        if self.action == 'destroy':
-            return [IsAuthenticated(), IsOwnerOrReadOnly(), IsAdminUser()]
+        if self.action in ["destroy", "update", "partial_update"]:
+            return [IsAdminUser()]
         return []
 
 
