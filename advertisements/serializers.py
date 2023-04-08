@@ -19,7 +19,7 @@ class AdvertisementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Advertisement
         fields = ('id', 'title', 'description', 'creator',
-                  'status', 'created_at', 'favorites')
+                  'status', 'created_at')
 
     def create(self, validated_data):
         validated_data["creator"] = self.context["request"].user
