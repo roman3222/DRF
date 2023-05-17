@@ -67,5 +67,5 @@ jobs:
         with:
           host: ${{ secrets.IP_HOST }}
           username: ${{ secrets.HOST_USER }}
-          password: ${{ secrets.HOST_PASSWORD }]
+          password: ${{ secrets.HOST_PASSWORD }}
           script: expect /home/roman_22/DRF/deploying.exp
