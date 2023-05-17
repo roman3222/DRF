@@ -26,6 +26,6 @@ router.register('adv', AdvertisementViewSet)
 
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('api/v1/', include(router.urls)),
     path('admin/', admin.site.urls),
 ] + router.urls
